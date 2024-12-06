@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="data.php" method="POST" enctype="multipart/form-data">
+        <div class="header">
+            <div class="logo">
+                <img src="logo.jpg" alt="BSA Logo" width="100">
+            </div>
+            <div class="photo">
+                <label for="photo-upload" class="photo-box">
+                    รูปถ่าย<br>1 นิ้ว
+                </label>
+                <input type="file" id="photo-upload" name="photo" accept="image/*" required>
+            </div>
+            <div class="title">
+                <h1>สมาคมผู้ตรวจสอบอาคาร</h1>
+                <h2>THE BUILDING INSPECTOR ASSOCIATION</h2>
+                <h3>ใบสมัครสมาชิก / ต่ออายุสมาชิก (Application Form)</h3>
+            </div>
+        </div>
+
+        <fieldset>
+            <legend>ข้อมูลสมาชิก</legend>
+            <div class="form-group">
+                <label for="number-member">เลขที่สมาชิก:</label>
+                <input type="text" id="number-member" name="number_member" required>
+            </div>
+            <div class="form-group">
+                <label for="date">วันที่:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>ข้อมูลส่วนบุคคล</legend>
+            <p>(สำหรับเจ้าหน้าที่/กรณีต่ออายุสมาชิกเก่า)</p>
+            <div class="form-group">
+                <label for="first_name">ชื่อ (First Name):</label>
+                <input type="text" id="first_name" name="first_name" placeholder="Surattana" required>
+            </div>
+            <div class="form-group">
+                <label for="surname">นามสกุล (Surname):</label>
+                <input type="text" id="surname" name="surname" placeholder="Kakay" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">วัน/เดือน/ปี เกิด (Date of Birth):</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="form-group">
+                <label for="age">อายุ (Age):</label>
+                <input type="number" id="age" name="age" min="0">
+            </div>
+            <div class="form-group">
+                <label for="sex">เพศ (Sex):</label>
+                <select id="sex" name="sex" required>
+                    <option value="" disabled selected>เลือกเพศ</option>
+                    <option value="male">ชาย</option>
+                    <option value="female">หญิง</option>
+                    <option value="other">อื่นๆ</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="nationality">สัญชาติ (Nationality):</label>
+                <input type="text" id="nationality" name="nationality" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>ข้อมูลหน่วยงาน/บริษัท</legend>
+            <div class="form-group">
+                <label for="company">หน่วยงาน/บริษัท (Agency/Company):</label>
+                <input type="text" id="company" name="company">
+            </div>
+            <div class="form-group">
+                <label for="business_type">ประเภทธุรกิจ (Business Type):</label>
+                <input type="text" id="business_type" name="business_type">
+            </div>
+            <div class="form-group">
+                <label for="company_address">ที่อยู่บริษัท:</label>
+                <input type="text" id="company_address" name="company_address">
+            </div>
+            <div class="form-group">
+                <label for="moo">หมู่:</label>
+                <input type="text" id="moo" name="moo">
+            </div>
+            <div class="form-group">
+                <label for="soi">ตรอก/ซอย:</label>
+                <input type="text" id="soi" name="soi">
+            </div>
+            <div class="form-group">
+                <label for="road">ถนน:</label>
+                <input type="text" id="road" name="road">
+            </div>
+            <div class="form-group">
+                <label for="sub_district">ตำบล/แขวง:</label>
+                <input type="text" id="sub_district" name="sub_district">
+            </div>
+            <div class="form-group">
+                <label for="district">อำเภอ/เขต:</label>
+                <input type="text" id="district" name="district">
+            </div>
+            <div class="form-group">
+                <label for="province">จังหวัด:</label>
+                <input type="text" id="province" name="province">
+            </div>
+            <div class="form-group">
+                <label for="postal_code">รหัสไปรษณีย์:</label>
+                <input type="text" id="postal_code" name="postal_code">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>ข้อมูลติดต่อ</legend>
+            <div class="form-group">
+                <label for="mobile_phone">โทรศัพท์มือถือ:</label>
+                <input type="tel" id="mobile_phone" name="mobile_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="095-555-5555">
+            </div>
+            <div class="form-group">
+                <label for="fax">โทรสาร:</label>
+                <input type="text" id="fax" name="fax">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="line">ID Line:</label>
+                <input type="text" id="line" name="line">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>สถานที่ติดต่อ (Contact Address)</legend>
+            <div class="form-group">
+                <input type="radio" id="contact_company" name="contact_address" value="company" required>
+                <label for="contact_company">ที่อยู่บริษัท (Company)</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="contact_home" name="contact_address" value="home">
+                <label for="contact_home">ที่อยู่ปัจจุบัน (Home)</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>ระดับการศึกษาสูงสุด (Highest Degree Of Graduated)</legend>
+            <div class="form-group">
+                <input type="radio" id="degree_vocational" name="degree" value="vocational">
+                <label for="degree_vocational">ปวช. (Vocational Certificate)</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="degree_high_vocational" name="degree" value="high_vocational">
+                <label for="degree_high_vocational">ปวส. (High Vocational Certificate)</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="degree_bachelor" name="degree" value="bachelor">
+                <label for="degree_bachelor">ปริญญาตรี (Bachelor)</label>
+            </div>
+            <div class="form-group degree-details">
+                <label for="bachelor_faculty">คณะ:</label>
+                <input type="text" id="bachelor_faculty" name="bachelor_faculty">
+                <label for="bachelor_major">สาขาวิชา:</label>
+                <input type="text" id="bachelor_major" name="bachelor_major">
+                <label for="bachelor_university">สถาบัน/มหาวิทยาลัย:</label>
+                <input type="text" id="bachelor_university" name="bachelor_university">
+            </div>
+            <div class="form-group">
+                <input type="radio" id="degree_master" name="degree" value="master_or_higher">
+                <label for="degree_master">ปริญญาโท หรือ สูงกว่า (Master or Higher)</label>
+            </div>
+            <div class="form-group degree-details">
+                <label for="higher_faculty">คณะ:</label>
+                <input type="text" id="higher_faculty" name="higher_faculty">
+                <label for="higher_major">สาขาวิชา:</label>
+                <input type="text" id="higher_major" name="higher_major">
+                <label for="higher_university">สถาบัน/มหาวิทยาลัย:</label>
+                <input type="text" id="higher_university" name="higher_university">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>อาชีพ (Career)</legend>
+            <div class="form-group">
+                <input type="radio" id="career_building_inspector" name="career" value="building_inspector">
+                <label for="career_building_inspector">ผู้ตรวจสอบอาคาร (ใบอนุญาตเลขที่....)</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="career_power_inspector" name="career" value="power_inspector">
+                <label for="career_power_inspector">ผู้ตรวจสอบพลังงาน (ใบอนุญาตเลขที่....)</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="career_electrical_inspector" name="career" value="electrical_inspector">
+                <label for="career_electrical_inspector">ผู้ตรวจสอบไฟฟ้า (ใบอนุญาตเลขที่....)</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="career_workplace_inspector" name="career" value="workplace_inspector">
+                <label for="career_workplace_inspector">ผู้ตรวจสอบเอกชน (โรงงาน) (ใบอนุญาตเลขที่....)</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="career_other" name="career" value="other">
+                <label for="career_other">อื่นๆ (โปรดระบุ)</label>
+                <input type="text" id="other_occupation" name="other_occupation">
+            </div>
+            <p class="expl">
+                ข้าพเจ้าขอรับรองว่าข้อความข้างต้นเป็นความจริงทุกประการ เมื่อได้เป็นสมาชิกของสมาคมผู้ตรวจสอบอาคาร แล้วข้าพเจ้าจะส่งเสริมกิจกรรมต่างๆ ของสมาคมฯ เพื่อให้เกิดประโยชน์สูงสุด
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>ประเภทการสมัครสมาชิก</legend>
+            <div class="form-group">
+                <input type="radio" id="membership_personal_domestic" name="membership_type" value="personal_domestic" required>
+                <label for="membership_personal_domestic">บุคคลธรรมดาในประเทศ (รายปี 400 บาท / ราย 5 ปี 1,450 บาท)</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="membership_personal_overseas" name="membership_type" value="personal_overseas">
+                <label for="membership_personal_overseas">บุคคลธรรมดาต่างประเทศ (รายปี 300 บาท / ราย 5 ปี 1,000 บาท)</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="membership_company_domestic" name="membership_type" value="company_domestic">
+                <label for="membership_company_domestic">นิติบุคคลในประเทศ (รายปี 3,000 บาท / ราย 5 ปี 13,500 บาท)</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="membership_company_overseas" name="membership_type" value="company_overseas">
+                <label for="membership_company_overseas">นิติบุคคลต่างประเทศ (รายปี 2,000 บาท / ราย 5 ปี 9,000 บาท)</label>
+            </div>
+            <p>**หมายเหตุ : ราคาดังกล่าวรวมค่าบัตรสมาชิก (สำหรับประเภทบุคคลและนิติบุคคล)</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>ประเภทการชำระเงิน</legend>
+            <div class="form-group">
+                <input type="radio" id="payment_cash" name="payment_method" value="cash" required>
+                <label for="payment_cash">เงินสด</label>
+                <input type="text" name="transfer_details" placeholder="รายละเอียดการโอน (ถ้ามี)">
+            </div>
+            <div class="form-group">
+                <input type="radio" id="payment_transfer" name="payment_method" value="transfer">
+                <label for="payment_transfer">
+                    โอนเงิน ธนาคารไทยพาณิชย์ สาขาสี่แยกศรีวรา ชื่อบัญชี "สมาคมผู้ตรวจสอบอาคาร" เลขที่บัญชี 140-2-35560-9
+                </label>
+                <br>
+                พร้อมส่งสำเนาใบ Pay in มาที่ โทรสาร 02-184-4613 / 
+                <a href="mailto:bsa@gmail.com">bsa@gmail.com</a>, 
+                <a href="mailto:bsa.siwawut@gmail.com">bsa.siwawut@gmail.com</a>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>ข้อตกลงการเก็บข้อมูล</legend>
+            <div class="form-group">
+                <input type="radio" id="data_consent_yes" name="data_consent" value="yes" required>
+                <label for="data_consent_yes">
+                    ยินยอมให้สมาคมฯ เปิดเผยชื่อ - ข้อมูลส่วนตัวเพื่อประโยชน์ในการค้นหาข้อมูลผู้ตรวจสอบจากผู้สนใจ
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="radio" id="data_consent_no" name="data_consent" value="no">
+                <label for="data_consent_no">ไม่ยินยอมให้สมาคมฯ เปิดเผยชื่อ - ข้อมูลส่วนตัว</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>เอกสารแนบ</legend>
+            <ol>
+                <li>สำเนาบัตรประชาชน</li>
+                <li>สำเนาจดทะเบียนบริษัท (เฉพาะนิติบุคคล)</li>
+                <li>สำเนาใบประกอบวิชาชีพ</li>
+                <li>สำเนาวุฒิบัตรการขึ้นทะเบียนผู้ตรวจสอบอาคาร/ผู้ตรวจสอบพลังงาน/ผู้ตรวจสอบไฟฟ้า/ผู้ตรวจสอบเอกชน (โรงงาน) (ถ้ามี)</li>
+                <li>รูปถ่าย 1 นิ้ว 1 รูป</li>
+            </ol>
+        </fieldset>
+
+        <button type="submit">ยืนยัน</button>
+    </form>
+</body>
+</html>

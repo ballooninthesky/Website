@@ -1,0 +1,43 @@
+/* กำหนดฟอนต์พื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+/* จัดการหัวข้อให้ชิดกลาง */
+h2 {
+    text-align: center; /* จัดหัวข้อให้อยู่ตรงกลาง */
+}
+
+/* จัดการตาราง */
+table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    padding: 10px; /* เพิ่ม padding สำหรับหัวข้อและข้อมูล */
+}
+
+th {
+    background-color: #7ba0b6; /* สีพื้นหลังของหัวตาราง */
+    color: white;
+    width: 25%; /* กำหนดขนาดคอลัมน์หัวข้อ */
+    text-align: left; /* จัดข้อความให้อยู่ซ้ายสำหรับหัวข้อ */
+    padding-left: 15px; /* เพิ่ม padding ซ้ายสำหรับหัวข้อ */
+}
+
+td {
+    background-color: #f9f9f9;
+    width: 60%; /* กำหนดขนาดคอลัมน์ข้อมูล */
+    text-align: left; /* จัดข้อความให้อยู่ซ้าย */
+    padding-left: 15px; /* เพิ่ม padding ซ้ายสำหรับข้อมูล */
+}
+
+/* ให้ข้อความในเซลล์ตารางไม่ล้น */
+td, th {
+    word-wrap: break-word;
+}
