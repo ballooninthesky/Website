@@ -1,0 +1,867 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --about-width:85vw;
+    --font-normal: "Inter", sans-serif;
+    --animation-: ;
+}
+
+/* Hide horizontal overflow */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100vw;
+    background-color: #fffae0;
+    margin: 0;
+    overflow-x: hidden; /* Prevents horizontal overflow */
+}
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: #37773f;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #46BAA5;
+    width: 6px;
+    border-radius: 5px;
+}
+
+#FirstViewPage, #HomePage, #GoalPage, #AboutPage {
+    background-image: url(img/bg-img.png);
+    background-size: cover;
+}
+#CountryPage {
+    overflow-y: hidden;
+    background-image: url(img/longbg-img.png);
+    background-size: cover;
+}
+
+/*************************************header**********************************/
+header {
+    background-color: #CCE87C;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+}
+.navbar {
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    max-width: 1000px; /* กำหนดความกว้างสูงสุด */
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.navbar a {
+    width: 100px;
+    font-family: var(--font-normal);
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0 50px;
+    color: black;
+    transition: transform 0.3s ease; /* เพิ่มการเปลี่ยนแปลงให้เนียนขึ้น */
+}
+
+.navbar a:hover {
+    transform: scale(1.2);
+}
+.logo {
+    height: 60px;
+}
+.nav-link {
+        text-decoration: none;
+}
+.current {
+    text-decoration: underline black;
+}
+
+/*************************************home**********************************/
+.home {
+    position: relative;
+    gap: 10rem;
+    width: 100vw;
+    margin: 0 auto; /* จัดเนื้อหาให้อยู่ตรงกลาง */
+    height: 100vh;
+}
+
+.text-content {
+    position: absolute;
+    top: 50%;
+    right: 5vw;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column; /* จัดเรียงเนื้อหาในแนวตั้ง */
+    text-align: left;
+    width: 50vw;
+    z-index: 10;
+}
+
+.text-content h1 {
+    font-family: var(--font-normal);
+    font-size: 150px; /* ขนาดตัวอักษรของ h1 */
+    margin: 0; /* ลบมาร์จินค่าเริ่มต้นของ h1 */
+    margin-bottom: -50px;
+    margin-top: 40px;
+}
+
+.text-content h2 {
+    font-family: var(--font-normal);
+    font-size: 70px; /* ขนาดตัวอักษรของ h1 */
+    margin: 0; /* ลบมาร์จินค่าเริ่มต้นของ h1 */
+    margin-bottom: -15px;
+}
+
+.text-content h3 {
+    font-family: var(--font-normal);
+    font-size: 60px; /* ขนาดตัวอักษรของ h1 */
+    margin: 0; /* ลบมาร์จินค่าเริ่มต้นของ h1 */
+    margin-left: 200px;
+}
+
+.text-content p {
+    font-family: var(--font-normal);
+    font-size: 15px;
+    margin-bottom: 120px;
+    line-height: 1.3; /* เพิ่มระยะห่างระหว่างบรรทัด */
+    letter-spacing: 0.05em; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+.homeimgA, .homeimgB {    position: absolute;
+    bottom: 0;
+}
+.homeimgA {
+    width: 110vw;
+    left: -10vw;
+    z-index: 5;
+}
+.homeimgB {
+    width: 100vw;
+    left: -7vw;
+    z-index: 1;
+}
+
+/*************************************first view**********************************/
+#FirstViewPage { 
+    overflow: hidden;
+}
+
+#firstView {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.fv-country {
+    width: 720px;
+    position: absolute;
+}
+
+.eyes {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.fv-Thai {
+    top: -50px;
+    left: -190px;
+    transform: rotate(70deg);
+}
+
+.fv-Japan {
+    bottom: -120px;
+    left: 0;
+    transform: rotate(25deg);
+}
+
+.fv-Korea {
+    bottom: -120px;
+    right: 0;
+    transform: rotate(-25deg);
+}
+
+.fv-India {
+    top: -100px;
+    right: -190px;
+    transform: rotate(-70deg);
+}
+
+.firstView-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%); /* จัดให้ตรงกลางทั้งแนวตั้งและแนวนอน */
+    text-align: center;
+}
+
+.firstView-text h1 {
+    font-size: 70px;
+    color: #738641;
+    margin-bottom: 20px;
+}
+
+.btn-index {
+    padding: 10px 20px;
+    background-color: #CCE87C;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-index:hover {
+    background-color: #738641;
+    color: white;
+    transform: scale(1.1); /* ขยายขนาดเมื่อ hover */
+}
+
+
+
+
+
+/*************************************goal**********************************/
+.goal {
+    display: flex; /* ใช้ Flexbox */
+    flex-direction: column; /*จัดเรียงเนื้อหาในแนวตั้ง */
+    text-align: center; /* จัดข้อความใน h1 และ p ให้อยู่กึ่งกลาง */
+    max-width: 800px;
+    padding: 20px;
+    margin: auto; /* ให้ .goal อยู่ตรงกลางของหน้า */
+}
+
+.goal h1 {
+    font-family: var(--font-normal);
+    font-size: 80px;
+    margin-bottom: 20px; 
+    margin-top: 100px;
+}
+
+.goal p {
+    font-family: var(--font-normal);
+    font-size: 18px;
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+    margin: 0; 
+    margin-bottom: 60px;
+    letter-spacing: 0.05em;
+}
+
+.goal-img {
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
+.goal-img img{
+    width: 60vw;
+    margin-top: -150px;
+    margin-bottom: -55px;
+}
+
+/*************************************about**********************************/
+#AboutPage{
+    margin: 0 auto;
+    justify-content:center;
+}
+
+.about-fv {
+    /* ใช้ flexbox เพื่อจัดวางข้อความและรูปภาพในแนวนอน */
+    position: relative;
+    width: var(--about-width);
+    justify-content:center;
+    margin:0 auto;
+    height:60vh;
+    margin-top: 120px;
+    justify-items: center;
+}
+
+.about-fv h1 {
+    z-index: 2;
+    width:var(--about-width);
+    font-size: 8em;
+    position: absolute;
+    top:15%;
+    left:0%;
+    margin: 0 auto;
+    line-height:0.75em;
+    /*padding: 10px;*/
+}
+
+#A {
+    font-size:2em;
+}
+
+.about-fv img {
+    width:calc(var(--about-width) * 0.6875);
+    height:calc(var(--about-width) * 0.25);
+    position: absolute;
+    right:0;
+    bottom:0;
+}
+
+.about-content {
+    display: flex;
+    width:calc(var(--about-width) * 0.9);
+    height:30vw;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    position:relative;
+}
+
+.about-content p {
+    width:60%;
+    font-size:1.5em;
+    margin: 0 auto;
+    line-height:2.7em;
+    align-content:center;
+    position:absolute;
+    left: 0;
+    top:0;
+}
+
+.slide-flame {
+    position: absolute;
+    right:0;
+    top:0;
+    overflow: hidden;
+    width:30vw;
+    height:30vw;
+}
+
+.slide {
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-repeat: none;
+}
+
+#pro1 {
+    background-image: url(img/Balloon.jpg);
+    animation: slide1 25s infinite;
+}
+
+#pro2 {
+    background-image: url(img/Faii.jpg);
+    animation: slide2 25s infinite;
+}
+
+#pro3 {
+    background-image: url(img/Tane.jpg);
+    animation: slide3 25s infinite;
+}
+
+#pro4 {
+    background-image: url(img/Saelun.jpg);
+    animation: slide4 25s infinite;
+}
+
+@keyframes slide1 {
+    0% {opacity: 1}
+  20% {opacity: 1;}
+  25% {opacity: 0;}
+  95% {opacity: 0}
+100% {opacity: 1;}
+}
+@keyframes slide2 {
+    0% {opacity: 0;}
+  20% {opacity: 0}
+  25% {opacity: 1;}
+  50% {opacity: 1;}
+  55% {opacity: 0;}
+100% {opacity: 0;}
+}
+@keyframes slide3 {
+    0% {opacity: 0;}
+  50% {opacity: 0}
+  55% {opacity: 1;}
+  75% {opacity: 1;}
+  80% {opacity: 0}
+100% {opacity: 0;}
+}
+@keyframes slide4{
+    0% {opacity: 0;}
+  75% {opacity: 0}
+  80% {opacity: 1;}
+  95% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+/*
+.one-text {
+    flex: 1;
+    padding: 15px;
+    text-align: right;
+}
+
+.one-text h1{
+    font-size: 80px;
+}
+
+.one-text p{
+    font-size: 50px;
+    margin-top: -60px;
+}
+
+.one-img {
+    flex: 1; /* ให้รูปภาพใช้พื้นที่เท่ากับข้อความ 
+    overflow: hidden; /* ตัดส่วนที่เกินออก 
+}
+
+.one-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 300px;
+    max-height: 300px;
+}*/
+
+/*************************************footer**********************************/
+footer {
+    background-color: #CCE87C;
+    z-index: 1;
+}
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a {
+    display: flex; /* ใช้ Flexbox */
+    justify-content: center; /* จัดให้อยู่กลางแนวนอน */
+    align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+    text-align: center;
+}
+.socialIcons a i {
+    font-size: 2em;
+    color: #CCE87C;
+    opacity: 0.9; /* ควรเป็น 0.9 แทนที่ 0,9 */
+}
+/* Hover effect on social media icon */
+.socialIcons a:hover {
+    background-color: #CCE87C;
+    transition: 0.5s;
+}
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav p {
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+
+#country {
+    width: 60vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-around;
+    z-index: 5;
+}
+.country_move {
+    animation: flagUp 1s ease-in-out forwards;
+}
+@keyframes flagUp {
+    0% { width: 60vw; top: 50%; }
+    100% { width: 30vw; top: 17%; }
+}
+.flag{ 
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: 50% 50%;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.flag:not(.selectBorder):hover {
+    transform: scale(1.2);
+}
+.flag_move {
+    animation: flagSmall 1s ease-in-out forwards;
+}
+@keyframes flagSmall {
+    0% { width: 100px; height: 100px; }
+    100% { width: 60px; height: 60px; }
+}
+
+.Japan {
+    background-image: url(img/japan.svg);
+}
+.Thailand {
+    background-image: url(img/thailand.svg);
+}
+.Korea {
+    background-image: url(img/Korea.svg);
+}
+.India {
+    background-image: url(img/india.svg);
+}
+.selectBorder {
+    transform: scale(1.5);
+}
+
+#food-img {
+    display: none;
+    position: absolute;
+    width: 113vw;
+    height: 105vh;
+    z-index: 1;
+}
+.food-img_move {
+    animation: foodimgUp 1s ease-in-out forwards;
+}
+@keyframes foodimgUp {
+    0% { bottom: -100%; opacity: 0; }
+    100% { bottom: 0; opacity: 1; }
+}
+.rotate-circle {
+    width: 90vw;
+    position: absolute;
+    bottom: 30vh;
+    left: -22vw;
+}
+.rotate-ctn-good, .rotate-ctn-bad {
+    position: absolute; 
+    top: -115vh;
+    left: 5vw;
+    width: 40vw;
+    height: 200vh;
+    transform-origin: 50% 50%;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.visible-left {
+    animation-name: visible-interior-left;
+}
+.visible-right {
+    animation-name: visible-interior-right
+}
+.hidden-left {
+    animation-name: hidden-interior-left;
+}
+.hidden-right {
+    animation-name: hidden-interior-right;
+}
+@keyframes visible-interior-left {
+    0%   { transform: rotate(-70deg); opacity: 0; }
+    100% { transform: rotate(0deg); opacity: 1; }
+}
+@keyframes visible-interior-right {
+    0%   { transform: rotate(70deg); opacity: 0; }
+    100% { transform: rotate(0deg); opacity: 1; }
+}
+
+@keyframes hidden-interior-left {
+    0%   { transform: rotate(0deg); opacity: 1; }
+    100% { transform: rotate(70deg); opacity: 0; }
+}
+@keyframes hidden-interior-right {
+    0%   { transform: rotate(0deg); opacity: 1; }
+    100% { transform: rotate(-70deg); opacity: 0; }
+}
+.good, .bad {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 200%;
+    width: 50vw;
+}
+.bad {
+    display: none;
+}
+
+.group1 {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 8%;
+    left: 12%;
+}
+.rotate-left, .rotate-right {
+    border: none;
+    cursor: pointer;
+    background-color: #CCE87C;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-weight: 600;
+    text-align: center;
+}
+.rotate-left:hover, .rotate-right:hover {
+    background-color: #94b833;
+}
+.foodtext {
+    font-size: 20px;
+    font-weight: 700;
+}
+.group2 {
+    width: 300px;
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    text-align: right;
+}
+.countryname {  
+    font-size: 100px;
+}
+.countryflag {
+    width: 120px;
+    border-radius: 20px;
+    margin: o ;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.group3 {
+    width: 80vw;
+    height: auto;
+    margin: 110vh auto 0;
+    position: relative;
+    text-align: center;
+}
+.flexgroup {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.source {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #fffcec;
+    font-size: 15px;
+    border: 1.5px solid black;
+    cursor: pointer;
+    border-radius: 30px;
+    text-align: center;
+}
+.source:hover {
+    background-color: #fff4b6;
+}
+.fromdata {
+    position: fixed;
+    text-align: left;
+    background-color: #fffcec;
+    border: 3px #CCE87C solid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40vw;
+    padding: 30px;
+    border-radius: 30px;
+    z-index: 100;
+}
+.fromdata a {
+    text-decoration: underline black;
+    color: black;
+    
+}
+.fromdata h1 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+.fromdata h1:hover {
+    transform: scale(1.1);
+}
+.fromdata p {
+    margin: 10px;
+}
+.background-rectangle {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80vw; /* กำหนดความกว้างตามต้องการ */
+    height: 120%; /* กำหนดความสูงตามต้องการ */
+    background-color: #fffcec; /* สีพื้นหลัง */
+    z-index: -1; /* ให้พื้นหลังอยู่ด้านหลังเนื้อหา */
+    border-radius: 50px;
+    box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.chart {
+    width: 600px;
+}
+.textgroup1 {
+    width: 30vw;
+    text-align: left;
+    margin-right: 70px;
+}
+.textgroup1 h2 {
+    font-size: 30px;
+}
+.textgroup2 {
+    text-align: center;
+    margin: 50px auto 100px;
+    width: 60vw;
+}
+
+#malnutrition {
+    margin-top: 200px;
+    display: none;
+}
+.malnutrition-title {
+    text-align: center;
+    color: #AF2727;
+}
+.group4, .group5 {
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    text-align: left;
+    align-items: center;
+}
+.group4 p, .group5 p {
+    width: 65%;
+}
+.group4 img {
+    width: 25%;
+}
+.group5 img {
+    width: 30%;
+}
+
+/* Nutritious-ingredients */
+#nutritious-ingredients {
+    margin-top: 200px;
+}
+.nutritious-title {
+    text-align: center;
+    line-height: 40px;
+}
+
+/* 画像スライダー */
+.slider-group {
+    display: flex;
+    width: 800px;
+    margin: 0 auto;
+    justify-content: space-between;
+    position: relative;
+}
+.slider {
+    width: 700px;
+    height: 300px;
+    display: grid;
+    justify-content: left;
+    position: relative;
+    margin: 30px auto 0;
+    overflow: hidden;
+}
+.slider_outer {
+    position: relative;
+    width: 1140px;
+    height: 300px;   
+    overflow: hidden;
+}
+.slider_container {
+    display: flex;
+    column-gap: 40px;
+    transition: .5s ease-in-out;
+    padding: 0 20px;
+}
+.slider_item {
+    width: 250px;
+    height: 250px;
+    background-image: url(img/paper.png);
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.2));
+}
+.slider_item img {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+.slider_item p {
+    font-size: 13px;
+    width: 180px;
+    position: absolute;
+    top: 135px;
+    left: 50%;
+    transform: translate(-50%);
+    line-height: 16px;
+}
+
+/* 進む・戻るボタン */
+.next_btn, .back_btn{
+    all: initial;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.next_btn img, .back_btn img {
+    width: 40px;
+}
+button:active {
+    opacity: .6;
+}
+.next_btn {
+    position: absolute;
+    top: 110px;
+    right: -20px;
+}
+.back_btn {
+    position: absolute;
+    opacity: 0.2;
+    top: 110px;
+    left: -20px;
+}
+
+.vetpic{
+    width: 30vw;
+    margin: 0 auto;
+}

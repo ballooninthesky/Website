@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Nutri-chan</title>
+        <meta name="description" content="schoolfood">
+        <meta name="viewport" content= "width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_pc.css" media="(min-width: 600px)">
+        <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');</style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>	
+    </head>
+
+    
+    <body id="CountryPage">
+        <header>
+            <nav class="navbar">
+                <a href="home.html" class="nav-link">HOME</a>
+                <a href="goal.html" class="nav-link">GOAL</a>
+                <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo"></a>
+                <a href="country.html" class="current">COUNTRY</a>
+                <a href="about.html" class="nav-link">ABOUT US</a>
+            </nav>
+        </header>
+
+        <div id="country">
+            <div class="flag Japan"></div>
+            <div class="flag Thailand"></div>
+            <div class="flag Korea"></div>
+            <div class="flag India"></div>
+        </div>
+
+        <div id="food-img">
+            <div class="rotate">
+                <div class="rotate-ctn-good">
+                    <img class="good">
+                </div>
+                <div class="rotate-ctn-bad">
+                    <img class="bad">
+                </div>
+            </div>
+            <article class="group1">
+                <button type="button" class="rotate-left">&lt;</button>
+                <h3 class="foodtext">High Quality Food</h3>
+                <button type="button" class="rotate-right">&gt;</button>
+            </article>
+
+            <article class="group2">
+                <img src="img/japan.svg" class="countryflag">
+                <h1 class="countryname">Japan</h1>
+            </article>
+        </div>
+
+        <article class="group3">
+            <div class="background-rectangle"></div>
+            <article class="flexgroup">
+                <div class="source">source</div>
+                <div class="fromdata">
+                    <h1>×</h1>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="chart">
+                    <canvas id="myRaderChart">
+                    </canvas>
+                </div>
+                <article class="textgroup1">
+                    <h2></h2>
+                    <p></p>
+                </article>
+            </article>
+            <article class="textgroup2">
+            <p></p>
+        </article>
+        </article>
+
+        
+        <div id="malnutrition">
+            <h1 class="malnutrition-title">Malnutrition</h1>
+            <article class="group4">
+                <img src="img/malnutrition1.png">
+                <p></p>
+            </article>
+            <article class="group5">
+                <p></p>
+                <img src="img/malnutrition2.png">
+            </article>
+        </div>
+
+        <div id="nutritious-ingredients">
+            <h1 class="nutritious-title">Nutritious<br>ingredients</h1>
+            <div class="slider-group">
+                <button type="button" class="next_btn"><img src="img/arrow-right-01-stroke-rounded.svg"></button>
+                <div class="slider">
+                    <div class="slider_outer">
+                        <div class="slider_container">
+                            <div class="slider_item">
+                                <img>
+                                <p></p>
+                            </div>
+                            <div class="slider_item">
+                                <img>
+                                <p></p>
+                            </div>
+                            <div class="slider_item">
+                                <img>
+                                <p></p>
+                            </div>
+                            <div class="slider_item">
+                                <img>
+                                <p></p>
+                            </div>
+                            <div class="slider_item">
+                                <img>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="back_btn"><img src="img/arrow-left-01-stroke-rounded.svg"></button>
+            </div>
+        </div>
+
+        <div class="vetpic">
+            <img src="img/vet2.png">
+        </div>
+
+        <footer>
+            <div class="footerContainer">
+                <div class="socialIcons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-google-plus"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="footerNav">
+                    <p>Copyright Wakata Wakata</p>
+                </div>
+    
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
