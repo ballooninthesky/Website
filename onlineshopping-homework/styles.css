@@ -1,0 +1,341 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #4CAF50; /* สีเขียว */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.search-bar {
+    display: flex;                /* Use flexbox for alignment */
+    justify-content: center;      /* Center the content horizontally */
+    margin: 20px 0;              /* Add some margin */
+}
+.search-bar input[type="text"] {
+    width: 300px;                /* Set the width of the input field */
+    padding: 10px;               /* Add some padding for comfort */
+    border: 1px solid #ccc;      /* Add a border */
+    border-radius: 5px;          /* Rounded corners */
+}
+.search-bar input[type="submit"] {
+    padding: 10px 15px;          /* Add padding to the button */
+    border: none;                 /* Remove border */
+    background-color: #007BFF;   /* Button color */
+    color: white;                 /* Button text color */
+    border-radius: 5px;          /* Rounded corners */
+    cursor: pointer;              /* Pointer cursor on hover */
+    margin-left: 10px;           /* Space between input and button */
+}
+.search-bar input[type="submit"]:hover {
+    background-color: #0056b3;    /* Darker shade on hover */
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 200px; /* กำหนดขนาดของสินค้า */
+}
+
+.product-name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-price, .product-stock {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.product-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50; /* สีเขียว */
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.product-link:hover {
+    background-color: #45a049; /* สีเขียวเข้ม */
+}
+
+/*login*/
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container input[type="submit"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-container input[type="submit"] {
+    background-color: #4CAF50; /* สีเขียว */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #45a049; /* สีเขียวเข้ม */
+}
+
+.success {
+    color: #4CAF50; /* สีเขียว */
+    font-weight: bold;
+    text-align: center;
+}
+
+.error {
+    color: red; /* สีแดง */
+    font-weight: bold;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #4CAF50; /* สีเขียว */
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #45a049; /* สีเขียวเข้ม */
+}
+
+/*product detail*/
+
+.product-detail-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail {
+    text-align: center;
+}
+
+.product-image {
+    object-fit: cover; /* Ensures the image covers the dimensions without distortion */
+}
+
+.product-image-small {
+    width: 150px;   /* Width for the product listing */
+    height: 200px;  /* Height for the product listing */
+}
+
+.product-image-large {
+    width: 300px;   /* Width for the product detail */
+    height: 400px;  /* Height for the product detail */
+}
+
+
+.price {
+    font-size: 1.5em;
+    color: #d9534f; /* สีแดง */
+}
+
+.description {
+    margin: 15px 0;
+    font-size: 1em;
+}
+
+.stock {
+    font-size: 1em;
+    color: #5bc0de; /* สีฟ้า */
+}
+
+/*admin dashboard*/
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50; /* สีเขียว */
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* สีพื้นหลังเมื่อมีการโฮเวอร์ */
+}
+
+.delete-link {
+    color: #d9534f; /* สีแดงสำหรับลิงก์ลบ */
+    text-decoration: none;
+}
+
+.delete-link:hover {
+    text-decoration: underline; /* ขีดเส้นใต้เมื่อโฮเวอร์ */
+}
+
+/*manage product*/
+.product-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.submit-button, .edit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.submit-button:hover, .edit-button:hover {
+    background-color: #45a049;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 150px;
+    max-height: 200px;
+    border-radius: 8px;
+}
+
+.delete-link {
+    color: red;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.delete-link:hover {
+    text-decoration: underline;
+}
+
+.no-products {
+    text-align: center;
+    color: #555; /* สีเทาอ่อนสำหรับข้อความไม่พบสินค้า */
+}
+
+/*register*/
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    max-width: 400px; /* Maximum width of the form */
+    margin: 0 auto; /* Center the form on the page */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+}
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%; /* Full width of the form */
+    max-width: 300px; /* Set a maximum width */
+    padding: 10px; /* Padding for input fields */
+    margin: 5px 0; /* Margin between input fields */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 5px; /* Rounded corners */
+}
+input[type="submit"] {
+    padding: 10px; /* Padding for submit button */
+    border: none; /* Remove border */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.footer {
+    background-color: #4CAF50; /* สีเขียว */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
